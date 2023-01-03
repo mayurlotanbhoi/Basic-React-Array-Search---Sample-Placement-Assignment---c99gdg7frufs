@@ -19,18 +19,18 @@ const searchArray = [
 ];
 
 const App = () => {
-  const [sortedarray, setsortedarray] = useState([...searchArray]);
+  const [sortedarray, setsortedarray] = useState([]);
 
   const sortarra = (e) => {
     console.log(e.target.value);
 
-    const sortedarray1 = sortedarray.filter((item) => {
+    const sortedarray1 = searchArray.filter((item) => {
       // console.log(item);
       return item.toLowerCase().includes(e.target.value.toLowerCase());
     });
 
     if (e.target.value == "") {
-      setsortedarray([...searchArray]);
+      setsortedarray([]);
     } else {
       setsortedarray([...sortedarray1]);
     }
