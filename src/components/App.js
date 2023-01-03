@@ -37,8 +37,8 @@ const App = () => {
   };
   return (
     <div id="main">
-      <input onChange={(e) => sortarra(e)} />
-      <p>result</p>
+      <input id="search-input" onChange={(e) => sortarra(e)} />
+      <p>Result</p>
       <ul>
         {sortedarray.map((items) => {
           return (
